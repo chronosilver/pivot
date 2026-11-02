@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Имя Фамилия — дизайнер интерфейсов и брендов</title>
-  <meta name="description" content="Портфолио дизайнера: интерфейсы, брендинг и сайты. Принимаю новые проекты.">
+  <title>Настя — графический и веб-дизайнер</title>
+  <meta name="description" content="Портфолио Насти: графический и веб-дизайн, сайты на Tilda и на чистом коде (HTML, CSS, JS). Принимаю новые проекты.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,61 +15,52 @@
 
   <!-- Шапка -->
   <header class="header">
-    <div class="container header__inner">
-      <a class="logo" href="#top">Имя Фамилия</a>
-
-      <!-- Бургер на чистом CSS (checkbox). На неделе 5 заменяется логикой на JS -->
-      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Открыть меню">
-      <label class="burger" for="nav-toggle" aria-hidden="true">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </label>
-
-      <nav class="nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li><a class="nav__link" href="#works">Работы</a></li>
-          <li><a class="nav__link" href="#about">Обо мне</a></li>
-          <li><a class="nav__link" href="#services">Услуги</a></li>
-          <li><a class="nav__link" href="#reviews">Отзывы</a></li>
-          <li><a class="nav__link nav__link--accent" href="#contact">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="container header__nav" aria-label="Основная навигация">
+      <a class="header__link" href="#about">Обо мне</a>
+      <a class="header__link" href="#works">Работы</a>
+      <a class="header__link" href="#contact">Контакты</a>
+    </nav>
   </header>
 
   <main id="top">
 
     <!-- Hero -->
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Дизайнер интерфейсов и брендов · Москва</p>
-        <h1 class="hero__title">
-          Проектирую цифровые продукты, <em>которыми приятно пользоваться</em>
+      <!-- Декоративный символ на фоне (замените файл images/symbol.svg на свой) -->
+      <img class="hero__mark" src="images/symbol.svg" alt="" width="800" height="800">
+
+      <div class="container hero__main">
+        <p class="hero__hello">Привет,<br>я Настя.</p>
+
+        <!-- Крупный заголовок: первое слово по кругу сменяется другими профессиями -->
+        <h1 class="hero__title" aria-label="веб-дизайн, графдизайн, брендинг, айдентика + делаю сайты">
+          <span class="rotator" aria-hidden="true">
+            <span class="rotator__word" style="--n:0">веб-дизайн</span>
+            <span class="rotator__word" style="--n:1">графдизайн</span>
+            <span class="rotator__word" style="--n:2">брендинг</span>
+            <span class="rotator__word" style="--n:3">айдентика</span>
+          </span>
+          <br>
+          <span aria-hidden="true">+ делаю сайты</span>
         </h1>
 
-        <div class="hero__bottom">
+        <div class="hero__info">
           <p class="hero__text">
-            Помогаю командам и основателям превращать идеи в понятные интерфейсы и аккуратную айдентику. Работаю от исследования до готового макета.
+            Я графический и веб-дизайнер из Москвы. Рисую айдентику и интерфейсы, а потом сама превращаю макеты в сайты: на Tilda и на чистом коде — HTML, CSS и JS.
           </p>
 
-          <ul class="hero__facts">
-            <li class="fact">
-              <span class="fact__value">6 лет</span>
-              <span class="fact__label">в дизайне</span>
-            </li>
-            <li class="fact">
-              <span class="fact__value">40+</span>
-              <span class="fact__label">проектов</span>
-            </li>
-            <li class="fact">
-              <span class="fact__value">Открыт</span>
-              <span class="fact__label">к новым заказам</span>
-            </li>
-          </ul>
-
-          <a class="button" href="#contact">Обсудить проект <span aria-hidden="true">→</span></a>
+          <address class="hero__contacts">
+            <span>Москва, Россия</span>
+            <a href="tel:+70000000000">+7 000 000-00-00</a>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+          </address>
         </div>
       </div>
+
+      <a class="hero__more" href="#works">
+        Смотреть работы
+        <svg class="hero__more-icon" width="20" height="10" viewBox="0 0 20 10" fill="none" aria-hidden="true"><path d="M1 1l9 8 9-8" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
     </section>
 
     <!-- Работы -->
@@ -83,67 +74,67 @@
         <div class="works">
           <article class="card">
             <a class="card__link" href="#">
-              <div class="card__media"><img src="images/work-1.svg" alt="Обложка проекта «Название проекта 01»" width="800" height="600"></div>
+              <div class="card__media"><img src="images/work-1.svg" alt="Обложка проекта: кофейня Зерно" width="800" height="600"></div>
               <div class="card__meta">
-                <h3 class="card__title">Название проекта 01</h3>
+                <h3 class="card__title">Кофейня «Зерно»</h3>
                 <span class="card__year">2025</span>
               </div>
-              <p class="card__tags">Брендинг · Сайт</p>
+              <p class="card__tags">Айдентика · Сайт на Tilda</p>
             </a>
           </article>
 
           <article class="card">
             <a class="card__link" href="#">
-              <div class="card__media"><img src="images/work-2.svg" alt="Обложка проекта «Название проекта 02»" width="800" height="600"></div>
+              <div class="card__media"><img src="images/work-2.svg" alt="Обложка проекта: студия йоги Дыхание" width="800" height="600"></div>
               <div class="card__meta">
-                <h3 class="card__title">Название проекта 02</h3>
+                <h3 class="card__title">Студия йоги «Дыхание»</h3>
                 <span class="card__year">2025</span>
               </div>
-              <p class="card__tags">Мобильное приложение</p>
+              <p class="card__tags">Лендинг · HTML, CSS, JS</p>
             </a>
           </article>
 
           <article class="card">
             <a class="card__link" href="#">
-              <div class="card__media"><img src="images/work-3.svg" alt="Обложка проекта «Название проекта 03»" width="800" height="600"></div>
+              <div class="card__media"><img src="images/work-3.svg" alt="Обложка проекта: книжный клуб Страница" width="800" height="600"></div>
               <div class="card__meta">
-                <h3 class="card__title">Название проекта 03</h3>
+                <h3 class="card__title">Книжный клуб «Страница»</h3>
                 <span class="card__year">2024</span>
               </div>
-              <p class="card__tags">Айдентика</p>
+              <p class="card__tags">Графический дизайн · Постеры</p>
             </a>
           </article>
 
           <article class="card">
             <a class="card__link" href="#">
-              <div class="card__media"><img src="images/work-4.svg" alt="Обложка проекта «Название проекта 04»" width="800" height="600"></div>
+              <div class="card__media"><img src="images/work-4.svg" alt="Обложка проекта: сервис доставки Свежо" width="800" height="600"></div>
               <div class="card__meta">
-                <h3 class="card__title">Название проекта 04</h3>
+                <h3 class="card__title">Сервис доставки «Свежо»</h3>
                 <span class="card__year">2024</span>
               </div>
-              <p class="card__tags">Веб-сервис · UX</p>
+              <p class="card__tags">Веб-дизайн · UX/UI</p>
             </a>
           </article>
 
           <article class="card">
             <a class="card__link" href="#">
-              <div class="card__media"><img src="images/work-5.svg" alt="Обложка проекта «Название проекта 05»" width="800" height="600"></div>
+              <div class="card__media"><img src="images/work-5.svg" alt="Обложка проекта: портфолио фотографа" width="800" height="600"></div>
               <div class="card__meta">
-                <h3 class="card__title">Название проекта 05</h3>
+                <h3 class="card__title">Портфолио фотографа</h3>
                 <span class="card__year">2023</span>
               </div>
-              <p class="card__tags">Дизайн-система</p>
+              <p class="card__tags">Дизайн · Сайт на коде</p>
             </a>
           </article>
 
           <article class="card">
             <a class="card__link" href="#">
-              <div class="card__media"><img src="images/work-6.svg" alt="Обложка проекта «Название проекта 06»" width="800" height="600"></div>
+              <div class="card__media"><img src="images/work-6.svg" alt="Обложка проекта: фестиваль Лето" width="800" height="600"></div>
               <div class="card__meta">
-                <h3 class="card__title">Название проекта 06</h3>
+                <h3 class="card__title">Фестиваль «Лето»</h3>
                 <span class="card__year">2022</span>
               </div>
-              <p class="card__tags">Лендинг</p>
+              <p class="card__tags">Фирменный стиль · Афиши</p>
             </a>
           </article>
         </div>
@@ -154,17 +145,17 @@
     <section class="section section--surface" id="about">
       <div class="container about">
         <div class="about__media">
-          <img src="images/portrait.svg" alt="Портрет: Имя Фамилия" width="800" height="1000">
+          <img src="images/portrait.svg" alt="Портрет: Настя" width="800" height="1000">
         </div>
 
         <div class="about__content">
           <p class="eyebrow">Обо мне</p>
-          <h2 class="section__title">Дизайн — это <em>внимание к деталям</em> и уважение к пользователю</h2>
+          <h2 class="section__title">Рисую макеты и <em>сама собираю</em> из них сайты</h2>
           <p class="about__text">
-            Меня зовут Имя. Шесть лет делаю интерфейсы и айдентику для стартапов, студий и продуктовых команд. Верю, что хороший дизайн почти незаметен: он просто работает.
+            Меня зовут Настя. Я графический и веб-дизайнер: делаю айдентику, полиграфию и интерфейсы. Раньше мои макеты при запуске часто менялись до неузнаваемости, и я решила разобраться в коде сама.
           </p>
           <p class="about__text">
-            Люблю сдержанную типографику, ясную структуру и честные решения. Работаю в Figma, умею верстать, поэтому понимаю, как макет превращается в живой сайт.
+            Теперь собираю сайты двумя способами: быстро и аккуратно на Tilda, а когда нужен полный контроль — на чистом HTML, CSS и JavaScript. Поэтому проектирую дизайн с учётом того, как он будет работать в браузере.
           </p>
           <a class="link" href="#contact">Написать мне</a>
         </div>
@@ -181,23 +172,23 @@
         <ol class="services">
           <li class="service">
             <span class="service__num">01</span>
-            <h3 class="service__title">Дизайн интерфейсов</h3>
-            <p class="service__text">Сайты, веб-сервисы и мобильные приложения: от структуры и прототипа до финальных макетов.</p>
+            <h3 class="service__title">Графический дизайн</h3>
+            <p class="service__text">Логотипы, айдентика, полиграфия и оформление соцсетей: образ, который легко узнать и повторить.</p>
           </li>
           <li class="service">
             <span class="service__num">02</span>
-            <h3 class="service__title">Брендинг и айдентика</h3>
-            <p class="service__text">Логотип, цвета, типографика и правила их использования для цельного образа.</p>
+            <h3 class="service__title">Веб-дизайн</h3>
+            <p class="service__text">Макеты сайтов и интерфейсов в Figma: структура, типографика и адаптив под телефон.</p>
           </li>
           <li class="service">
             <span class="service__num">03</span>
-            <h3 class="service__title">Дизайн-системы</h3>
-            <p class="service__text">Библиотеки компонентов и токены, с которыми команда работает быстрее и последовательнее.</p>
+            <h3 class="service__title">Сайты на Tilda</h3>
+            <p class="service__text">Быстрый запуск лендингов и небольших сайтов с аккуратной настройкой под ваш бренд.</p>
           </li>
           <li class="service">
             <span class="service__num">04</span>
-            <h3 class="service__title">Передача в разработку</h3>
-            <p class="service__text">Аккуратные макеты и спецификации, чтобы результат в браузере совпадал с задумкой.</p>
+            <h3 class="service__title">Сайты на коде</h3>
+            <p class="service__text">Индивидуальная вёрстка на HTML, CSS и JS, когда конструктора мало: слайдеры, анимации, быстрая загрузка.</p>
           </li>
         </ol>
       </div>
@@ -214,19 +205,19 @@
       <div class="swiper reviews">
         <div class="swiper-wrapper">
           <article class="swiper-slide review">
-            <blockquote class="review__text">«Спокойный профессиональный процесс и результат, который превзошёл ожидания. Макеты можно отдавать в разработку без доработок».</blockquote>
+            <blockquote class="review__text">«Настя сделала и логотип, и сайт, всё в одном стиле. Не пришлось объяснять, как дизайн должен работать в браузере».</blockquote>
             <p class="review__author"><strong>Имя Фамилия</strong><span>Должность, компания</span></p>
           </article>
           <article class="swiper-slide review">
-            <blockquote class="review__text">«Помогла выстроить айдентику с нуля. Всё аккуратно, внятно и точно по срокам».</blockquote>
+            <blockquote class="review__text">«Лендинг на Tilda получился не шаблонным: аккуратная типографика и свои детали. Запустились за две недели».</blockquote>
             <p class="review__author"><strong>Имя Фамилия</strong><span>Основатель, студия</span></p>
           </article>
           <article class="swiper-slide review">
-            <blockquote class="review__text">«Редкий случай, когда дизайнер понимает и пользователя, и разработку. Работать было легко».</blockquote>
+            <blockquote class="review__text">«Дизайн и вёрстка от одного человека сильно экономят время. Правки вносились в тот же день».</blockquote>
             <p class="review__author"><strong>Имя Фамилия</strong><span>Продакт-менеджер</span></p>
           </article>
           <article class="swiper-slide review">
-            <blockquote class="review__text">«Сайт получился чистым и узнаваемым. Клиенты регулярно отмечают, как удобно им пользоваться».</blockquote>
+            <blockquote class="review__text">«Сайт на чистом коде открывается мгновенно и выглядит точно так, как в макете».</blockquote>
             <p class="review__author"><strong>Имя Фамилия</strong><span>Владелец бизнеса</span></p>
           </article>
         </div>
@@ -234,46 +225,23 @@
     </section>
 
     <!-- Контакты -->
-    <section class="section contact" id="contact">
-      <div class="container contact__inner">
-        <div class="contact__intro">
-          <p class="eyebrow">Контакты</p>
-          <h2 class="contact__title">Расскажите о <em>вашем проекте</em></h2>
-          <a class="contact__mail" href="mailto:hello@example.com">hello@example.com</a>
-          <ul class="contact__links">
-            <li><a class="link" href="#">Telegram</a></li>
-            <li><a class="link" href="#">Behance</a></li>
-            <li><a class="link" href="#">LinkedIn</a></li>
-          </ul>
-        </div>
+    <section class="contact" id="contact">
+      <!-- Тот же декоративный символ на фоне -->
+      <img class="contact__mark" src="images/symbol.svg" alt="" width="800" height="800">
 
-        <form class="form" action="#" method="post">
-          <div class="field">
-            <label class="field__label" for="name">Имя</label>
-            <input class="field__input" type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
-          </div>
-          <div class="field">
-            <label class="field__label" for="email">Почта</label>
-            <input class="field__input" type="email" id="email" name="email" placeholder="you@example.com" required>
-          </div>
-          <div class="field">
-            <label class="field__label" for="message">Сообщение</label>
-            <textarea class="field__input field__input--area" id="message" name="message" rows="4" placeholder="Коротко о задаче и сроках"></textarea>
-          </div>
-          <button class="button" type="submit">Отправить <span aria-hidden="true">→</span></button>
-        </form>
+      <div class="container contact__inner">
+        <ul class="contact__socials">
+          <li><a class="contact__social" href="#">telegram</a></li>
+          <li><a class="contact__social" href="#">behance</a></li>
+          <li><a class="contact__social" href="#">instagram</a></li>
+        </ul>
+
+        <a class="contact__phone" href="tel:+70000000000">+7 000 000-00-00</a>
+        <a class="contact__mail" href="mailto:hello@example.com">hello@example.com</a>
       </div>
     </section>
 
   </main>
-
-  <!-- Подвал -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© 2025 Имя Фамилия</p>
-      <a class="link" href="#top">Наверх ↑</a>
-    </div>
-  </footer>
 
 </body>
 </html>
